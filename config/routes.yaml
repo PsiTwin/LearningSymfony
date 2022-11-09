@@ -1,0 +1,107 @@
+register:
+  path: /register
+  controller: App\Controller\AuthController::register
+  methods: POST
+
+#login.check:
+#  path: /api/login_check
+
+login.check:
+  path: /api/login_check
+  controller: App\Controller\AuthController::getToken
+  methods: POST
+
+authors.create:
+  path: /api/authors
+  controller: App\Controller\AuthorController::add
+  methods: POST
+
+authors.getList:
+  path: /api/authors
+  controller: App\Controller\AuthorController::search
+  methods: GET
+
+authors.edit:
+  path: /api/authors/{id}
+  controller: App\Controller\AuthorController::update
+  methods: PATCH
+  requirements:
+    id: '\d+'
+
+authors.show:
+  path: /api/authors/{id}
+  controller: App\Controller\AuthorController::show
+  methods: GET
+  requirements:
+    id: '\d+'
+
+authors.delete:
+  path: /api/authors/{id}
+  controller: App\Controller\AuthorController::delete
+  methods: DELETE
+  requirements:
+    id: '\d+'
+
+tag.create:
+  path: /api/tags
+  controller: App\Controller\TagController::add
+  methods: POST
+
+tag.edit:
+  path: /api/tags/{id}
+  controller: App\Controller\TagController::update
+  methods: PATCH
+  requirements:
+    id: '\d+'
+
+tag.show:
+  path: /api/tags/{id}
+  controller: App\Controller\TagController::show
+  methods: GET
+  requirements:
+    id: '\d+'
+
+tag.delete:
+  path: /api/tags/{id}
+  controller: App\Controller\TagController::delete
+  methods: DELETE
+  requirements:
+    id: '\d+'
+
+tag.getList:
+  path: /api/tags
+  controller: App\Controller\TagController::search
+  methods: GET
+
+mashup.create:
+  path: /api/mashups
+  controller: App\Controller\MashupController::add
+  methods: POST
+
+mashup.edit:
+  path: /api/mashups/{id}
+  controller: App\Controller\MashupController::update
+  methods: PATCH
+  requirements:
+    id: '\d+'
+
+mashup.show:
+  path: /api/mashups/{id}
+  controller: App\Controller\MashupController::show
+  methods: GET
+  requirements:
+    id: '\d+'
+
+mashup.delete:
+  path: /api/mashups/{id}
+  controller: App\Controller\MashupController::delete
+  methods: DELETE
+  requirements:
+    id: '\d+'
+
+mashup.search:
+  path: /api/mashups
+  controller: App\Controller\MashupController::search
+  methods: GET
+
+

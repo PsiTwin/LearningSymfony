@@ -1,0 +1,4 @@
+framework:
+  exceptions:
+    Symfony\Component\Validator\Exception\InvalidArgumentException:
+      status_code: 422
